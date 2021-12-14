@@ -9,6 +9,11 @@ ui_config {
 	enabled = false
 }
 
+# Enable Connect
+connect {
+	enabled = true
+}
+
 # The address to which Consul will bind client interfaces
 client_addr = "0.0.0.0"
 

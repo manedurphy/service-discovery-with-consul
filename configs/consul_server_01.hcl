@@ -9,6 +9,11 @@ ui_config {
 	enabled = true
 }
 
+# Enable Connect
+connect {
+	enabled = true
+}
+
 # Configures the ports
 ports {
 	http = 3000

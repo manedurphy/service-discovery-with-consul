@@ -34,7 +34,7 @@ func NewService(name string) (*Service, error) {
 
 	serviceDef = &api.AgentServiceRegistration{
 		Name:    name,
-		Address: "localhost",
+		Address: "0.0.0.0",
 		Meta: map[string]string{
 			"location": "atlanta",
 			"region":   "us-east-1",
