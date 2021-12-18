@@ -103,7 +103,7 @@ func main() {
 			err  error
 		)
 
-		resp, err = http.Get("http://localhost:8081/status")
+		resp, err = http.Get("http://localhost:8081/hello")
 		if err != nil {
 			w.WriteHeader(http.StatusInternalServerError)
 			w.Write([]byte(err.Error()))

@@ -79,9 +79,9 @@ func main() {
 		w.Write([]byte("healthy"))
 	})
 
-	mux.HandleFunc("/status", func(w http.ResponseWriter, r *http.Request) {
+	mux.HandleFunc("/hello", func(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusOK)
-		w.Write([]byte("the status is good"))
+		w.Write([]byte("hello from service two"))
 	})
 
 	server = &http.Server{
