@@ -1,0 +1,25 @@
+global:
+  name: consul
+  datacenter: dc1
+  manageSystemACLs: false
+server:
+  replicas: 3
+ui:
+  enabled: true
+  service:
+    type: "NodePort"
+connectInject:
+  enabled: true
+  default: false
+  replicas: 2
+  logLevel: "debug"
+  k8sAllowNamespaces: ["*"]
+  k8sDenyNamespaces: []
+  metrics:
+    defaultEnabled: true
+  transparentProxy:
+    defaultEnabled: true
+controller:
+  enabled: true
+syncCatalog:
+  enabled: false

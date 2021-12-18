@@ -6,17 +6,12 @@ data_dir = "/opt/consul"
 
 # The UI configuration
 ui_config {
-	enabled = true
+	enabled = false
 }
 
 # Enable Connect
 connect {
 	enabled = true
-}
-
-# Configures the ports
-ports {
-	http = 3000
 }
 
 # The address to which Consul will bind client interfaces
@@ -36,3 +31,9 @@ bootstrap_expect = 3
 
 # The address of the node to join on start up
 retry_join = ["172.31.107.196", "172.31.105.153", "172.31.110.188"]
+
+# Telemetry
+telemetry {
+	prometheus_retention_time = "60s"
+	disable_hostname = true
+}
