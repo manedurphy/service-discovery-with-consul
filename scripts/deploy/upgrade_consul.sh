@@ -1,3 +1,3 @@
 #! /bin/bash
 
-helm upgrade -f ./configs/yaml/consul.yaml --namespace="consul" consul hashicorp/consul
+helm upgrade --values ./configs/k8s/consul/consul.yaml --namespace="consul" consul hashicorp/consul

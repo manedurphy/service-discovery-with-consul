@@ -1,4 +1,3 @@
 #! /bin/bash
 
-kubectl apply -f configs/k8s/consul/consul_namespace.yaml
-helm install -f ./configs/k8s/consul/consul.yaml --namespace="consul" consul hashicorp/consul
+helm install --values ./configs/k8s/consul/consul.yaml --create-namespace --namespace="consul" consul hashicorp/consul

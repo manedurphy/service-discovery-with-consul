@@ -1,0 +1,12 @@
+[
+    {
+        "id": "2dc08218-ca5a-c5b0-1b80-e701e8681a2f",
+        "address": "172.31.107.196:8300",
+        "non_voter": false
+    },
+    {
+        "id": "3a73f60d-2df7-af7f-6873-166611713ac8",
+        "address": "172.31.105.153:8300",
+        "non_voter": false
+    }
+]

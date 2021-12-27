@@ -1,3 +1,6 @@
 #! /bin/bash
 
-kind load --name="dc1" docker-image manedurphy/service-one manedurphy/service-two
+echo "Loading image to Minikube"
+minikube image load manedurphy/service-one
+minikube image load manedurphy/service-two
+echo "Done!"
