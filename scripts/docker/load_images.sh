@@ -1,6 +1,6 @@
 #! /bin/bash
 
 echo "Loading image to Minikube"
-minikube image load manedurphy/service-one
-minikube image load manedurphy/service-two
+minikube image load manedurphy/one
+minikube image load manedurphy/two
 echo "Done!"

@@ -27,7 +27,7 @@ func main() {
 			err  error
 		)
 
-		resp, err = http.Get(fmt.Sprintf("%s/hello", os.Getenv("SERVICE_TWO_SERVICE_URL")))
+		resp, err = http.Get(fmt.Sprintf("%s/hello", os.Getenv("TWO_SERVICE_URL")))
 		if err != nil {
 			w.WriteHeader(http.StatusInternalServerError)
 			w.Write([]byte(err.Error()))

@@ -1,47 +1,41 @@
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: service-one
+  name: two
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: service-one
+  name: two
 spec:
   selector:
-    app: service-one
+    app: two
   ports:
-    - port: 8080
-      targetPort: 8080
+    - port: 8081
+      targetPort: 8081
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: service-one
+  name: two
 spec:
   selector:
     matchLabels:
-      app: service-one
+      app: two
   template:
     metadata:
       labels:
-        app: service-one
+        app: two
       annotations:
         "consul.hashicorp.com/connect-inject": "true"
     spec:
       containers:
-        - name: service-one
-          image: manedurphy/service-one
+        - name: two
+          image: manedurphy/two
           imagePullPolicy: "Never"
-          env:
-            - name: SERVICE_TWO_SERVICE_URL
-              value: http://service-two:8081
           resources:
-            requests:
-              memory: "64Mi"
-              cpu: "250m"
             limits:
               memory: "128Mi"
               cpu: "500m"
           ports:
-            - containerPort: 8080
+            - containerPort: 8081
