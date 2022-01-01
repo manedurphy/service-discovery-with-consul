@@ -27,7 +27,7 @@ service {
     }
   }
 
-	checks = [
+  checks = [
     {
       id = "web_check"
       name = "Check WEB health 8080"
