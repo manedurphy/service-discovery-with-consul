@@ -1,0 +1,11 @@
+[Unit]
+Description=Consul Envoy
+After=syslog.target network.target
+
+[Service]
+ExecStart=/usr/bin/consul connect envoy -sidecar-for="api-v1" -admin-bind="0.0.0.0:19000" -token="800818ce-ccb5-11ba-4cbc-b20dca15dac8"
+ExecStop=/bin/sleep 5
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

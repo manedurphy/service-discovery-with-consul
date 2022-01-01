@@ -1,0 +1,15 @@
+[Unit]
+Description=WEB
+After=syslog.target network.target
+
+[Service]
+Environment="MESSAGE=hello i am web"
+Environment="NAME=web"
+Environment="LISTEN_ADDR=0.0.0.0:8080"
+Environment="UPSTREAM_URIS=http://localhost:8081"
+ExecStart=/usr/local/bin/fake-service
+ExecStop=/bin/sleep 5
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
